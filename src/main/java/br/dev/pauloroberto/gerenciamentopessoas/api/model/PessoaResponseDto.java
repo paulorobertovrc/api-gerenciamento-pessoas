@@ -39,4 +39,14 @@ public record PessoaResponseDto(
         );
         this.endereco.add(new EnderecoResponseDto(enderecoResponseDto));
     }
+
+    public PessoaResponseDto(Pessoa pessoa, EnderecoDto enderecoDto) {
+        this(
+            pessoa.getId(),
+            pessoa.getNome(),
+            pessoa.getNascimento().toString(),
+            new ArrayList<>()
+        );
+        this.endereco.add(new EnderecoResponseDto(enderecoDto));
+    }
 }
