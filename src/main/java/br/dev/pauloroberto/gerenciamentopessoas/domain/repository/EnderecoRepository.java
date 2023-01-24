@@ -12,4 +12,6 @@ public interface EnderecoRepository extends CrudRepository<Endereco, Long> {
     Optional<Endereco> findByPessoaId(Long id);
 
     List<Endereco> findAllByPessoaId(Long pessoaId);
+
+    void deleteAllByPessoaId(Long id);
 }
