@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Repository
 public interface EnderecoRepository extends CrudRepository<Endereco, Long> {
-    Optional<Object> findByPessoaId(Long id);
+    Optional<Endereco> findByPessoaId(Long id);
 
     List<Endereco> findAllByPessoaId(Long pessoaId);
 }
