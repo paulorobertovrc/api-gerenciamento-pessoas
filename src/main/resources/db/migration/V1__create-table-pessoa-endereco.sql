@@ -15,7 +15,6 @@ CREATE TABLE endereco (
     estado VARCHAR(2) NOT NULL,
     cep VARCHAR(9) NOT NULL,
     pessoa_id BIGINT,
-    principal BOOLEAN DEFAULT FALSE,
 
     PRIMARY KEY (id)
 );
