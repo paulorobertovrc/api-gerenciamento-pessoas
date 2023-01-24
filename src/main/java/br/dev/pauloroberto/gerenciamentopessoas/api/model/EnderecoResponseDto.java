@@ -1,8 +1,11 @@
 package br.dev.pauloroberto.gerenciamentopessoas.api.model;
 
 import br.dev.pauloroberto.gerenciamentopessoas.domain.model.Endereco;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 public record EnderecoResponseDto(
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     Long id,
     String logradouro,
     String numero,
