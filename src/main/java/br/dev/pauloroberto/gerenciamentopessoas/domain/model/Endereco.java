@@ -36,7 +36,6 @@ public class Endereco {
     @Valid
     @ConvertGroup(to = ValidationGroups.PessoaId.class)
     private Pessoa pessoa;
-    private boolean principal;
 
     public Endereco(EnderecoDto endereco, Pessoa pessoa) {
         this.logradouro = endereco.logradouro();
@@ -45,14 +44,5 @@ public class Endereco {
         this.estado = endereco.estado();
         this.cep = endereco.cep();
         this.pessoa = pessoa;
-    }
-
-    public void setPrincipal() {
-        this.principal = true;
-        this.pessoa.setEnderecoPrincipal(this.id);
-    }
-
-    public void unsetPrincipal() {
-        this.principal = false;
     }
 }
